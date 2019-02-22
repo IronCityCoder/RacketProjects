@@ -46,3 +46,15 @@
 
 (isDogPowerful my-pet)
 |#
+
+#|
+;Let's create a struct with a list of games!
+(struct games (zelda skyrim mario) #:mutable)
+;How many levels are in each game?
+(define levels
+    (games 3 999 29))
+;Let's add another level to mario!
+(set-games-mario! levels 30)
+;Mario now has 30 levels.
+(writeln (games-mario levels))
+|#
